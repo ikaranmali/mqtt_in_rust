@@ -1,0 +1,21 @@
+[package]
+name = "mqtt-example"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+paho-mqtt = { git = "https://github.com/eclipse/paho.mqtt.rust.git", branch = "master" }
+chrono = "0.4"
+serde = { version = "1.0.104", features = ["derive"] }
+serde_json = "1.0.48"
+configparser = "2.1.0"
+
+[[bin]]
+name = "sub"
+path = "src/sub/main.rs"
+
+[[bin]]
+name = "pub"
+path = "src/pub/main.rs"
